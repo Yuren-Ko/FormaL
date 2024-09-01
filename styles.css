@@ -1,12 +1,12 @@
 body {
-    background-color: #121212; /* Темний фон */
-    color: #CCCCCC; /* Сірий текст */
+    background-color: #121212; /* Темный фон */
+    color: #CCCCCC; /* Серый текст */
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Выравнивание по верхней части */
     height: 100vh;
 }
 
@@ -15,6 +15,13 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px; /* Добавлен отступ сверху */
+    text-align: center; /* Центрируем текст в контейнере */
+}
+
+h2 {
+    color: #FFFFFF; /* Белый цвет для заголовка */
+    margin-bottom: 20px;
 }
 
 label {
