@@ -6,7 +6,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Выравнивание по верхней части */
+    align-items: flex-start;
     height: 100vh;
 }
 
@@ -19,9 +19,14 @@ body {
     text-align: center; /* Центрируем текст в контейнере */
 }
 
-h2 {
-    color: #FFFFFF; /* Белый цвет для заголовка */
+h2, h3 {
+    color: #FFFFFF; /* Белый цвет для заголовков */
     margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 30px; /* Добавлен отступ сверху для h3 */
+    text-align: left;
 }
 
 label {
