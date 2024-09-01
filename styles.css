@@ -1,0 +1,61 @@
+body {
+    background-color: #121212; /* Темний фон */
+    color: #CCCCCC; /* Сірий текст */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="time"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2C2C2C;
+    color: #CCCCCC;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3A3A3A;
+    color: #CCCCCC;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4A4A4A;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+}
