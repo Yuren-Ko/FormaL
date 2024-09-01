@@ -26,7 +26,7 @@ h2, h3 {
 
 h3 {
     margin-top: 30px; /* Добавлен отступ сверху для h3 */
-    text-align: left;
+    text-align: center;
 }
 
 label {
