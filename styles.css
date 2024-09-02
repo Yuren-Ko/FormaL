@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .form-container {
@@ -17,7 +17,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-top: 20px; /* Добавлен отступ сверху */
-    margin-bottom: 40px;
     text-align: center; /* Центрируем текст в контейнере */
 }
 
