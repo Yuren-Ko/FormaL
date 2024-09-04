@@ -25,7 +25,7 @@ function copyMainData() {
     if (distance) mainData += `Дистанція: ${distance}\n`;
     if (results) mainData += `Результати роботи: ${results}\n`;
 
-    return mainData.trim(); // Возвращаем строку для дальнейшего использования
+    return mainData.trim();
 }
 
 function copyAKData() {
@@ -44,7 +44,7 @@ function copyAKData() {
         if (shooterAk) akData += `Стрільбу вів: ${shooterAk}\n`;
     }
 
-    return akData.trim(); // Возвращаем строку для дальнейшего использования
+    return akData.trim();
 }
 
 function copyIglaData() {
@@ -63,27 +63,30 @@ function copyIglaData() {
         if (shooter) iglaData += `Стрілець: ${shooter}\n`;
     }
 
-    return iglaData.trim(); // Возвращаем строку для дальнейшего использования
+    return iglaData.trim();
 }
 
-function copyAllData() {
+function copySectionData(sectionId) {
     let dataString = '';
 
-    const mainData = copyMainData();
-    if (mainData) dataString += `${mainData}\n`;
-
-    const akData = copyAKData();
-    if (akData) dataString += `\n${akData}\n`;
-
-    const iglaData = copyIglaData();
-    if (iglaData) dataString += `\n${iglaData}\n`;
+    switch (sectionId) {
+        case 'main':
+            dataString = copyMainData();
+            break;
+        case 'ak':
+            dataString = copyAKData();
+            break;
+        case 'igla':
+            dataString = copyIglaData();
+            break;
+    }
 
     if (dataString) {
         navigator.clipboard.writeText(dataString).then(() => {
-            alert('Дані успішно скопійовані!');
+            alert(`Дані ${sectionId} секції скопійовані!`);
         }).catch(error => console.error('Помилка при спробі скопіювати дані:', error));
     } else {
-        alert("Немає даних для копіювання.");
+        alert(`Немає даних для копіювання в ${sectionId} секції.`);
     }
 }
 
@@ -113,35 +116,8 @@ function shareAllData() {
     }
 }
 
-document.getElementById("copy-main").addEventListener("click", () => {
-    const data = copyMainData();
-    if (data) {
-        navigator.clipboard.writeText(data).then(() => {
-            alert('Дані основної секції скопійовані!');
-        }).catch(error => console.error('Помилка при спробі скопіювати дані:', error));
-    } else {
-        alert("Немає даних для копіювання в основній секції.");
-    }
-});
-
-document.getElementById("copy-ak").addEventListener("click", () => {
-    const data = copyAKData();
-    if (data) {
-        navigator.clipboard.writeText(data).then(() => {
-            alert('Дані першої секції скопійовані!');
-        }).catch(error => console.error('Помилка при спробі скопіювати дані:', error));
-    } else {
-        alert("Немає даних для копіювання в першій секції.");
-    }
-});
-
-document.getElementById("copy-igla").addEventListener("click", () => {
-    const data = copyIglaData();
-    if (data) {
-        navigator.clipboard.writeText(data).then(() => {
-            alert('Дані другої секції скопійовані!');
-        }).catch(error => console.error('Помилка при спробі скопіювати дані:', error));
-    } else {
-        alert("Немає даних для копіювання в другій секції.");
-    }
-});
+// Установка обработчиков событий для кнопок
+document.getElementById("copy-main").addEventListener("click", () => copySectionData('main'));
+document.getElementById("copy-ak").addEventListener("click", () => copySectionData('ak'));
+document.getElementById("copy-igla").addEventListener("click", () => copySectionData('igla'));
+document.getElementById("share-all").addEventListener("click", shareAllData);
