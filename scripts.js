@@ -1,29 +1,38 @@
 function copyMainData() {
-    const post = document.getElementById("post").value;
-    const settlement = document.getElementById("settlement").value;
-    const time = document.getElementById("time").value;
-    const date = document.getElementById("date").value;
-    const targetNumber = document.getElementById("target-number").value;
-    const targetName = document.getElementById("target-name").value;
-    const azimuth = document.getElementById("azimuth").value;
-    const course = document.getElementById("course").value;
-    const altitude = document.getElementById("altitude").value;
-    const distance = document.getElementById("distance").value;
-    const results = document.getElementById("results").value;
+    let mainData = '';
 
-    const mainData = `
-Пост: ${post}
-Населений пункт: ${settlement}
-Час: ${time}
-Дата: ${date}
-Ном.цілі: ${targetNumber}
-Назва цілі: ${targetName}
-Азимут: ${azimuth}°
-Курс: ${course}°
-Висота: ${altitude}
-Дистанція: ${distance}
-Результати роботи: ${results}
-`;
+    const post = document.getElementById("post").value;
+    if (post) mainData += `Пост: ${post}\n`;
+
+    const settlement = document.getElementById("settlement").value;
+    if (settlement) mainData += `Населений пункт: ${settlement}\n`;
+
+    const time = document.getElementById("time").value;
+    if (time) mainData += `Час: ${time}\n`;
+
+    const date = document.getElementById("date").value;
+    if (date) mainData += `Дата: ${date}\n`;
+
+    const targetNumber = document.getElementById("target-number").value;
+    if (targetNumber) mainData += `Ном.цілі: ${targetNumber}\n`;
+
+    const targetName = document.getElementById("target-name").value;
+    if (targetName) mainData += `Назва цілі: ${targetName}\n`;
+
+    const azimuth = document.getElementById("azimuth").value;
+    if (azimuth) mainData += `Азимут: ${azimuth}°\n`;
+
+    const course = document.getElementById("course").value;
+    if (course) mainData += `Курс: ${course}°\n`;
+
+    const altitude = document.getElementById("altitude").value;
+    if (altitude) mainData += `Висота: ${altitude}\n`;
+
+    const distance = document.getElementById("distance").value;
+    if (distance) mainData += `Дистанція: ${distance}\n`;
+
+    const results = document.getElementById("results").value;
+    if (results) mainData += `Результати роботи: ${results}\n`;
 
     navigator.clipboard.writeText(mainData).then(() => {
         alert("Дані основної секції скопійовані.");
@@ -31,31 +40,40 @@ function copyMainData() {
 }
 
 function shareMainData() {
-    const post = document.getElementById("post").value;
-    const settlement = document.getElementById("settlement").value;
-    const time = document.getElementById("time").value;
-    const date = document.getElementById("date").value;
-    const targetNumber = document.getElementById("target-number").value;
-    const targetName = document.getElementById("target-name").value;
-    const azimuth = document.getElementById("azimuth").value;
-    const course = document.getElementById("course").value;
-    const altitude = document.getElementById("altitude").value;
-    const distance = document.getElementById("distance").value;
-    const results = document.getElementById("results").value;
+    let mainData = '';
 
-    const mainData = `
-Пост: ${post}
-Населений пункт: ${settlement}
-Час: ${time}
-Дата: ${date}
-Ном.цілі: ${targetNumber}
-Назва цілі: ${targetName}
-Азимут: ${azimuth}°
-Курс: ${course}°
-Висота: ${altitude}
-Дистанція: ${distance}
-Результати роботи: ${results}
-`;
+    const post = document.getElementById("post").value;
+    if (post) mainData += `Пост: ${post}\n`;
+
+    const settlement = document.getElementById("settlement").value;
+    if (settlement) mainData += `Населений пункт: ${settlement}\n`;
+
+    const time = document.getElementById("time").value;
+    if (time) mainData += `Час: ${time}\n`;
+
+    const date = document.getElementById("date").value;
+    if (date) mainData += `Дата: ${date}\n`;
+
+    const targetNumber = document.getElementById("target-number").value;
+    if (targetNumber) mainData += `Ном.цілі: ${targetNumber}\n`;
+
+    const targetName = document.getElementById("target-name").value;
+    if (targetName) mainData += `Назва цілі: ${targetName}\n`;
+
+    const azimuth = document.getElementById("azimuth").value;
+    if (azimuth) mainData += `Азимут: ${azimuth}°\n`;
+
+    const course = document.getElementById("course").value;
+    if (course) mainData += `Курс: ${course}°\n`;
+
+    const altitude = document.getElementById("altitude").value;
+    if (altitude) mainData += `Висота: ${altitude}\n`;
+
+    const distance = document.getElementById("distance").value;
+    if (distance) mainData += `Дистанція: ${distance}\n`;
+
+    const results = document.getElementById("results").value;
+    if (results) mainData += `Результати роботи: ${results}\n`;
 
     if (navigator.share) {
         navigator.share({
@@ -68,17 +86,19 @@ function shareMainData() {
 }
 
 function copyAKData() {
-    const pm = document.getElementById("pm").value;
-    const ts = document.getElementById("ts").value;
-    const targetingAk = document.getElementById("targeting-ak").value;
-    const shooterAk = document.getElementById("shooter-ak").value;
+    let akData = '';
 
-    const akData = `
-ПМ: ${pm}
-ТС: ${ts}
-Цілевказівку дав: ${targetingAk}
-Стрільбу вів: ${shooterAk}
-`;
+    const pm = document.getElementById("pm").value;
+    if (pm) akData += `ПМ: ${pm}\n`;
+
+    const ts = document.getElementById("ts").value;
+    if (ts) akData += `ТС: ${ts}\n`;
+
+    const targetingAk = document.getElementById("targeting-ak").value;
+    if (targetingAk) akData += `Цілевказівку дав: ${targetingAk}\n`;
+
+    const shooterAk = document.getElementById("shooter-ak").value;
+    if (shooterAk) akData += `Стрільбу вів: ${shooterAk}\n`;
 
     navigator.clipboard.writeText(akData).then(() => {
         alert("Дані секції АК-74/5.45 скопійовані.");
@@ -86,17 +106,19 @@ function copyAKData() {
 }
 
 function shareAKData() {
-    const pm = document.getElementById("pm").value;
-    const ts = document.getElementById("ts").value;
-    const targetingAk = document.getElementById("targeting-ak").value;
-    const shooterAk = document.getElementById("shooter-ak").value;
+    let akData = '';
 
-    const akData = `
-ПМ: ${pm}
-ТС: ${ts}
-Цілевказівку дав: ${targetingAk}
-Стрільбу вів: ${shooterAk}
-`;
+    const pm = document.getElementById("pm").value;
+    if (pm) akData += `ПМ: ${pm}\n`;
+
+    const ts = document.getElementById("ts").value;
+    if (ts) akData += `ТС: ${ts}\n`;
+
+    const targetingAk = document.getElementById("targeting-ak").value;
+    if (targetingAk) akData += `Цілевказівку дав: ${targetingAk}\n`;
+
+    const shooterAk = document.getElementById("shooter-ak").value;
+    if (shooterAk) akData += `Стрільбу вів: ${shooterAk}\n`;
 
     if (navigator.share) {
         navigator.share({
@@ -109,17 +131,19 @@ function shareAKData() {
 }
 
 function copyIglaData() {
-    const bkUsage = document.getElementById("bk-usage").value;
-    const missile = document.getElementById("missile").value;
-    const targeting = document.getElementById("targeting").value;
-    const shooter = document.getElementById("shooter").value;
+    let iglaData = '';
 
-    const iglaData = `
-НДЖ: ${bkUsage}
-Ракета: ${missile}
-Цілевказівку дав: ${targeting}
-Стрілець: ${shooter}
-`;
+    const bkUsage = document.getElementById("bk-usage").value;
+    if (bkUsage) iglaData += `НДЖ: ${bkUsage}\n`;
+
+    const missile = document.getElementById("missile").value;
+    if (missile) iglaData += `Ракета: ${missile}\n`;
+
+    const targeting = document.getElementById("targeting").value;
+    if (targeting) iglaData += `Цілевказівку дав: ${targeting}\n`;
+
+    const shooter = document.getElementById("shooter").value;
+    if (shooter) iglaData += `Стрілець: ${shooter}\n`;
 
     navigator.clipboard.writeText(iglaData).then(() => {
         alert("Дані секції ПЗРК Игла-1 скопійовані.");
@@ -127,17 +151,19 @@ function copyIglaData() {
 }
 
 function shareIglaData() {
-    const bkUsage = document.getElementById("bk-usage").value;
-    const missile = document.getElementById("missile").value;
-    const targeting = document.getElementById("targeting").value;
-    const shooter = document.getElementById("shooter").value;
+    let iglaData = '';
 
-    const iglaData = `
-НДЖ: ${bkUsage}
-Ракета: ${missile}
-Цілевказівку дав: ${targeting}
-Стрілець: ${shooter}
-`;
+    const bkUsage = document.getElementById("bk-usage").value;
+    if (bkUsage) iglaData += `НДЖ: ${bkUsage}\n`;
+
+    const missile = document.getElementById("missile").value;
+    if (missile) iglaData += `Ракета: ${missile}\n`;
+
+    const targeting = document.getElementById("targeting").value;
+    if (targeting) iglaData += `Цілевказівку дав: ${targeting}\n`;
+
+    const shooter = document.getElementById("shooter").value;
+    if (shooter) iglaData += `Стрілець: ${shooter}\n`;
 
     if (navigator.share) {
         navigator.share({
@@ -150,84 +176,48 @@ function shareIglaData() {
 }
 
 function copyAllData() {
-    const mainData = `
-Основна секція:
-Пост: ${document.getElementById("post").value}
-Населений пункт: ${document.getElementById("settlement").value}
-Час: ${document.getElementById("time").value}
-Дата: ${document.getElementById("date").value}
-Ном.цілі: ${document.getElementById("target-number").value}
-Назва цілі: ${document.getElementById("target-name").value}
-Азимут: ${document.getElementById("azimuth").value}°
-Курс: ${document.getElementById("course").value}°
-Висота: ${document.getElementById("altitude").value}
-Дистанція: ${document.getElementById("distance").value}
-Результати роботи: ${document.getElementById("results").value}
-`;
+    let dataString = '';
 
-    const akData = `
-Расход БК АК-74/5.45:
-ПМ: ${document.getElementById("pm").value}
-ТС: ${document.getElementById("ts").value}
-Цілевказівку дав: ${document.getElementById("targeting-ak").value}
-Стрільбу вів: ${document.getElementById("shooter-ak").value}
-`;
+    const mainData = copyMainData().trim();
+    if (mainData) dataString += `Основна секція:\n${mainData}\n`;
 
-    const iglaData = `
-Розхід Б.К. ПЗРК Игла-1:
-НДЖ: ${document.getElementById("bk-usage").value}
-Ракета: ${document.getElementById("missile").value}
-Цілевказівку дав: ${document.getElementById("targeting").value}
-Стрілець: ${document.getElementById("shooter").value}
-`;
+    const akData = copyAKData().trim();
+    if (akData) dataString += `Расход БК АК-74/5.45:\n${akData}\n`;
 
-    const dataString = mainData + akData + iglaData;
+    const iglaData = copyIglaData().trim();
+    if (iglaData) dataString += `Розхід Б.К. ПЗРК Игла-1:\n${iglaData}\n`;
 
-    navigator.clipboard.writeText(dataString).then(() => {
-        alert("Усі дані скопійовані.");
-    });
+    if (dataString) {
+        navigator.clipboard.writeText(dataString).then(() => {
+            alert("Усі дані скопійовані.");
+        });
+    } else {
+        alert("Немає даних для копіювання.");
+    }
 }
 
 function shareAllData() {
-    const mainData = `
-Основна секція:
-Пост: ${document.getElementById("post").value}
-Населений пункт: ${document.getElementById("settlement").value}
-Час: ${document.getElementById("time").value}
-Дата: ${document.getElementById("date").value}
-Ном.цілі: ${document.getElementById("target-number").value}
-Назва цілі: ${document.getElementById("target-name").value}
-Азимут: ${document.getElementById("azimuth").value}°
-Курс: ${document.getElementById("course").value}°
-Висота: ${document.getElementById("altitude").value}
-Дистанція: ${document.getElementById("distance").value}
-Результати роботи: ${document.getElementById("results").value}
-`;
+    let dataString = '';
 
-    const akData = `
-Расход БК АК-74/5.45:
-ПМ: ${document.getElementById("pm").value}
-ТС: ${document.getElementById("ts").value}
-Цілевказівку дав: ${document.getElementById("targeting-ak").value}
-Стрільбу вів: ${document.getElementById("shooter-ak").value}
-`;
+    const mainData = copyMainData().trim();
+    if (mainData) dataString += `Основна секція:\n${mainData}\n`;
 
-    const iglaData = `
-Розхід Б.К. ПЗРК Игла-1:
-НДЖ: ${document.getElementById("bk-usage").value}
-Ракета: ${document.getElementById("missile").value}
-Цілевказівку дав: ${document.getElementById("targeting").value}
-Стрілець: ${document.getElementById("shooter").value}
-`;
+    const akData = copyAKData().trim();
+    if (akData) dataString += `Расход БК АК-74/5.45:\n${akData}\n`;
 
-    const dataString = mainData + akData + iglaData;
+    const iglaData = copyIglaData().trim();
+    if (iglaData) dataString += `Розхід Б.К. ПЗРК Игла-1:\n${iglaData}\n`;
 
-    if (navigator.share) {
-        navigator.share({
-            title: 'Усі дані',
-            text: dataString,
-        }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
+    if (dataString) {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Усі дані',
+                text: dataString,
+            }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
+        } else {
+            alert('Ваш браузер не підтримує функцію поділитися.');
+        }
     } else {
-        alert('Ваш браузер не підтримує функцію поділитися.');
+        alert("Немає даних для поділитися.");
     }
 }
