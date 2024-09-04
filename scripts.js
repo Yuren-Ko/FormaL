@@ -13,20 +13,17 @@ function copyMainData() {
     const distance = document.getElementById("distance").value;
     const results = document.getElementById("results").value;
 
-    if (post || settlement || time || date || targetNumber || targetName || azimuth || course || altitude || distance || results) {
-        mainData += "Основна секція:\n";
-        if (post) mainData += `Пост: ${post}\n`;
-        if (settlement) mainData += `Населений пункт: ${settlement}\n`;
-        if (time) mainData += `Час: ${time}\n`;
-        if (date) mainData += `Дата: ${date}\n`;
-        if (targetNumber) mainData += `Ном.цілі: ${targetNumber}\n`;
-        if (targetName) mainData += `Назва цілі: ${targetName}\n`;
-        if (azimuth) mainData += `Азимут: ${azimuth}°\n`;
-        if (course) mainData += `Курс: ${course}°\n`;
-        if (altitude) mainData += `Висота: ${altitude}\n`;
-        if (distance) mainData += `Дистанція: ${distance}\n`;
-        if (results) mainData += `Результати роботи: ${results}\n`;
-    }
+    if (post) mainData += `Пост: ${post}\n`;
+    if (settlement) mainData += `Населений пункт: ${settlement}\n`;
+    if (time) mainData += `Час: ${time}\n`;
+    if (date) mainData += `Дата: ${date}\n`;
+    if (targetNumber) mainData += `Ном.цілі: ${targetNumber}\n`;
+    if (targetName) mainData += `Назва цілі: ${targetName}\n`;
+    if (azimuth) mainData += `Азимут: ${azimuth}°\n`;
+    if (course) mainData += `Курс: ${course}°\n`;
+    if (altitude) mainData += `Висота: ${altitude}\n`;
+    if (distance) mainData += `Дистанція: ${distance}\n`;
+    if (results) mainData += `Результати роботи: ${results}\n`;
 
     return mainData.trim(); // Возвращаем строку для дальнейшего использования
 }
