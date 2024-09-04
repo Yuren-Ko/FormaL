@@ -1,74 +1,65 @@
 body {
-    background-color: #121212; /* Темный фон */
-    color: #CCCCCC; /* Серый текст */
+    background-color: #2c2c2c;
+    color: #b0b0b0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding-bottom: 20px;
 }
 
-.form-container {
-    background-color: #1E1E1E;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #3a3a3a;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 20px; /* Добавлен отступ сверху */
-    text-align: center; /* Центрируем текст в контейнере */
 }
 
-h2, h3 {
-    color: #FFFFFF; /* Белый цвет для заголовков */
-    margin-bottom: 20px;
-}
-
-h3 {
-    margin-top: 30px; /* Добавлен отступ сверху для h3 */
-    text-align: center;
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
+    margin: 10px 0 5px;
 }
 
-input[type="text"],
-input[type="time"],
-input[type="date"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
+input[type="text"], input[type="time"], input[type="date"], input[type="number"] {
+    width: calc(100% - 30px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #b0b0b0;
     border-radius: 5px;
-    background-color: #2C2C2C;
-    color: #CCCCCC;
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+}
+
+.input-with-unit .unit {
+    margin-left: 5px;
+    color: #ffffff;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    background-color: #5c5c5c;
+    color: #ffffff;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    background-color: #3A3A3A;
-    color: #CCCCCC;
-    font-size: 14px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4A4A4A;
-}
-
-.buttons-container {
-    display: flex;
-    gap: 10px;
-}
-
-button {
-    flex: 1;
+    background-color: #727272;
 }
