@@ -48,9 +48,9 @@ input[type="text"], input[type="time"], input[type="date"], input[type="number"]
 input, textarea {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #5c5c5c;
+    border: 1px solid;
     border-radius: 4px;
-    width: 70%;
+    width: 90%;
 }
 
 textarea {
