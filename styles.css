@@ -45,6 +45,17 @@ input[type="text"], input[type="time"], input[type="date"], input[type="number"]
     color: #ffffff;
 }
 
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+
 .button-group {
     display: flex;
     justify-content: space-between;
