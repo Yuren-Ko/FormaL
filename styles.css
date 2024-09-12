@@ -46,11 +46,13 @@ input[type="text"], input[type="time"], input[type="date"], input[type="number"]
 }
 
 input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 4px;
-    width: 90%;
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #ffffff;
 }
 
 textarea {
