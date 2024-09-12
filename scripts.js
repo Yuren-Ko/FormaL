@@ -63,14 +63,111 @@ function shareMainData() {
     }
 }
 
+function copyRpkData() {
+    const form = document.getElementById('dataForm');
+    let dataString = 'Расход БК РПК/5.45:\n';
+
+    const keys = [
+        { id: 'rpk-ps', label: 'ПС' },
+        { id: 'rpk-ts', label: 'ТС' },
+        { id: 'shooter-rpk', label: 'Стрільбу вів' }
+    ];
+
+    keys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    navigator.clipboard.writeText(dataString).then(() => {
+        alert('Дані секції "Расход БК РПК/5.45" скопійовано до буферу обміну!');
+    });
+}
+
+function shareRpkData() {
+    const form = document.getElementById('dataForm');
+    let dataString = 'Расход БК РПК/5.45:\n';
+
+    const keys = [
+        { id: 'rpk-ps', label: 'ПС' },
+        { id: 'rpk-ts', label: 'ТС' },
+        { id: 'shooter-rpk', label: 'Стрільбу вів' }
+    ];
+
+    keys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    if (navigator.share) {
+        navigator.share({
+            title: 'Дані секції "Расход БК РПК/5.45"',
+            text: dataString,
+        }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
+    } else {
+        alert('Ваш браузер не підтримує функцію поділитися.');
+    }
+}
+
+function copyDhkData() {
+    const form = document.getElementById('dataForm');
+    let dataString = 'Расход БК ДШК/12.7мм:\n';
+
+    const keys = [
+        { id: 'mdz', label: 'МДЗ' },
+        { id: 'bzt', label: 'БЗТ' },
+        { id: 'shooter-dhk', label: 'Стрільбу вів' }
+    ];
+
+    keys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    navigator.clipboard.writeText(dataString).then(() => {
+        alert('Дані секції "Расход БК ДШК/12.7мм" скопійовано до буферу обміну!');
+    });
+}
+
+function shareDhkData() {
+    const form = document.getElementById('dataForm');
+    let dataString = 'Расход БК ДШК/12.7мм:\n';
+
+    const keys = [
+        { id: 'mdz', label: 'МДЗ' },
+        { id: 'bzt', label: 'БЗТ' },
+        { id: 'shooter-dhk', label: 'Стрільбу вів' }
+    ];
+
+    keys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    if (navigator.share) {
+        navigator.share({
+            title: 'Дані секції "Расход БК ДШК/12.7мм"',
+            text: dataString,
+        }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
+    } else {
+        alert('Ваш браузер не підтримує функцію поділитися.');
+    }
+}
+
 function copyAKData() {
     const form = document.getElementById('dataForm');
     let dataString = 'Расход БК АК-74/5.45:\n';
 
     const keys = [
-        { id: 'pm', label: 'ПМ' },
+        { id: 'ps', label: 'ПС' },
         { id: 'ts', label: 'ТС' },
-        { id: 'targeting-ak', label: 'Цілевказівку дав' },
         { id: 'shooter-ak', label: 'Стрільбу вів' }
     ];
 
@@ -91,9 +188,8 @@ function shareAKData() {
     let dataString = 'Расход БК АК-74/5.45:\n';
 
     const keys = [
-        { id: 'pm', label: 'ПМ' },
+        { id: 'ps', label: 'ПС' },
         { id: 'ts', label: 'ТС' },
-        { id: 'targeting-ak', label: 'Цілевказівку дав' },
         { id: 'shooter-ak', label: 'Стрільбу вів' }
     ];
 
@@ -114,15 +210,15 @@ function shareAKData() {
     }
 }
 
-function copyIglaData() {
+function copyBofData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Розхід Б.К. ПЗРК Игла-1:\n';
+    let dataString = 'Розхід БК Бофорс/л70:\n';
 
     const keys = [
-        { id: 'bk-usage', label: 'НДЖ' },
-        { id: 'missile', label: 'Ракета' },
+        { id: '40mm', label: '40мм' },
+        { id: 'shooter', label: 'Стрільбу вів' },
         { id: 'targeting', label: 'Цілевказівку дав' },
-        { id: 'shooter', label: 'Стрільбу вів' }
+        { id: 'video', label: 'Відео' }
     ];
 
     keys.forEach(({ id, label }) => {
@@ -133,19 +229,19 @@ function copyIglaData() {
     });
 
     navigator.clipboard.writeText(dataString).then(() => {
-        alert('Дані секції "Розхід Б.К. ПЗРК Игла-1" скопійовано до буферу обміну!');
+        alert('Дані секції "Розхід БК Бофорс/л70" скопійовано до буферу обміну!');
     });
 }
 
-function shareIglaData() {
+function shareBofData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Розхід Б.К. ПЗРК Игла-1:\n';
+    let dataString = 'Розхід БК Бофорс/л70:\n';
 
     const keys = [
-        { id: 'bk-usage', label: 'НДЖ' },
-        { id: 'missile', label: 'Ракета' },
+        { id: '40mm', label: '40мм' },
+        { id: 'shooter', label: 'Стрільбу вів' },
         { id: 'targeting', label: 'Цілевказівку дав' },
-        { id: 'shooter', label: 'Стрільбу вів' }
+        { id: 'video', label: 'Відео' }
     ];
 
     keys.forEach(({ id, label }) => {
@@ -157,7 +253,7 @@ function shareIglaData() {
 
     if (navigator.share) {
         navigator.share({
-            title: 'Дані секції "Розхід Б.К. ПЗРК Игла-1"',
+            title: 'Дані секції "Розхід БК Бофорс/л70"',
             text: dataString,
         }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
     } else {
@@ -183,18 +279,29 @@ function copyAllData() {
         { id: 'results', label: 'Результати роботи' }
     ];
 
-    const akSectionKeys = [
-        { id: 'pm', label: 'ПМ' },
+    const RpkSectionKeys = [
+        { id: 'rpk-ps', label: 'ПС' },
+        { id: 'rpk-ts', label: 'ТС' },
+        { id: 'shooter-rpk', label: 'Стрільбу вів' }
+    ];
+    
+    const DhkSectionKeys = [
+        { id: 'mdz', label: 'МДЗ' },
+        { id: 'bzt', label: 'БЗТ' },
+        { id: 'shooter-dhk', label: 'Стрільбу вів' }
+    ];
+    
+    const AkSectionKeys = [
+        { id: 'ps', label: 'ПС' },
         { id: 'ts', label: 'ТС' },
-        { id: 'targeting-ak', label: 'Цілевказівку дав' },
         { id: 'shooter-ak', label: 'Стрільбу вів' }
     ];
 
-    const iglaSectionKeys = [
-        { id: 'bk-usage', label: 'НДЖ' },
-        { id: 'missile', label: 'Ракета' },
+    const BofSectionKeys = [
+        { id: '40mm', label: '40мм' },
+        { id: 'shooter', label: 'Стрільбу вів' },
         { id: 'targeting', label: 'Цілевказівку дав' },
-        { id: 'shooter', label: 'Стрільбу вів' }
+        { id: 'video', label: 'Відео' }
     ];
 
     mainSectionKeys.forEach(({ id, label }) => {
@@ -203,17 +310,33 @@ function copyAllData() {
             dataString += `${label}: ${value}\n`;
         }
     });
-
-    dataString += '\nРасход БК АК-74/5.45:\n';
-    akSectionKeys.forEach(({ id, label }) => {
+    
+    dataString += '\nРасход БК РПК/5.45:\n';
+    RpkSectionKeys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+    
+    dataString += '\nРасход БК ДШК/12.7мм:\n';
+    DhkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
             dataString += `${label}: ${value}\n`;
         }
     });
 
-    dataString += '\nРозхід Б.К. ПЗРК Игла-1:\n';
-    iglaSectionKeys.forEach(({ id, label }) => {
+    dataString += '\nРасход БК АК-74/5.45:\n';
+    AkSectionKeys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    dataString += '\nРозхід БК Бофорс/л70:\n';
+    BofSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
             dataString += `${label}: ${value}\n`;
@@ -242,19 +365,30 @@ function shareAllData() {
         { id: 'distance', label: 'Дистанція' },
         { id: 'results', label: 'Результати роботи' }
     ];
+    
+    const RpkSectionKeys = [
+        { id: 'rpk-ps', label: 'ПС' },
+        { id: 'rpk-ts', label: 'ТС' },
+        { id: 'shooter-rpk', label: 'Стрільбу вів' }
+    ];
+    
+    const DhkSectionKeys = [
+        { id: 'mdz', label: 'МДЗ' },
+        { id: 'bzt', label: 'БЗТ' },
+        { id: 'shooter-dhk', label: 'Стрільбу вів' }
+    ];
 
-    const akSectionKeys = [
-        { id: 'pm', label: 'ПМ' },
+    const AkSectionKeys = [
+        { id: 'ps', label: 'ПС' },
         { id: 'ts', label: 'ТС' },
-        { id: 'targeting-ak', label: 'Цілевказівку дав' },
         { id: 'shooter-ak', label: 'Стрільбу вів' }
     ];
 
-    const iglaSectionKeys = [
-        { id: 'bk-usage', label: 'НДЖ' },
-        { id: 'missile', label: 'Ракета' },
+    const BofSectionKeys = [
+        { id: '40mm', label: '40мм' },
+        { id: 'shooter', label: 'Стрільбу вів' },
         { id: 'targeting', label: 'Цілевказівку дав' },
-        { id: 'shooter', label: 'Стрільбу вів' }
+        { id: 'video', label: 'Відео' }
     ];
 
     mainSectionKeys.forEach(({ id, label }) => {
@@ -263,17 +397,33 @@ function shareAllData() {
             dataString += `${label}: ${value}\n`;
         }
     });
-
-    dataString += '\nРасход БК АК-74/5.45:\n';
-    akSectionKeys.forEach(({ id, label }) => {
+    
+    dataString += '\nРасход БК РПК/5.45:\n';
+    RpkSectionKeys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+    
+    dataString += '\nРасход БК ДШК/12.7мм:\n';
+    DhkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
             dataString += `${label}: ${value}\n`;
         }
     });
 
-    dataString += '\nРозхід Б.К. ПЗРК Игла-1:\n';
-    iglaSectionKeys.forEach(({ id, label }) => {
+    dataString += '\nРасход БК АК-74/5.45:\n';
+    AkSectionKeys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    dataString += '\nРозхід БК Бофорс/л70:\n';
+    BofSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
             dataString += `${label}: ${value}\n`;
