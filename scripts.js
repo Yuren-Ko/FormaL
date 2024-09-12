@@ -216,7 +216,7 @@ function copyBofData() {
 
     const keys = [
         { id: '40mm', label: '40мм' },
-        { id: 'shooter', label: 'Стрільбу вів' },
+        { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
     ];
@@ -239,7 +239,7 @@ function shareBofData() {
 
     const keys = [
         { id: '40mm', label: '40мм' },
-        { id: 'shooter', label: 'Стрільбу вів' },
+        { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
     ];
@@ -299,7 +299,7 @@ function copyAllData() {
 
     const BofSectionKeys = [
         { id: '40mm', label: '40мм' },
-        { id: 'shooter', label: 'Стрільбу вів' },
+        { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
     ];
@@ -386,7 +386,7 @@ function shareAllData() {
 
     const BofSectionKeys = [
         { id: '40mm', label: '40мм' },
-        { id: 'shooter', label: 'Стрільбу вів' },
+        { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
     ];
