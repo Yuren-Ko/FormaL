@@ -65,7 +65,7 @@ function shareMainData() {
 
 function copyRpkData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Расход БК РПК/5.45:\n';
+    let dataString = 'Витрата БК РПК/5.45:\n';
 
     const keys = [
         { id: 'rpk-ps', label: 'ПС' },
@@ -81,13 +81,13 @@ function copyRpkData() {
     });
 
     navigator.clipboard.writeText(dataString).then(() => {
-        alert('Дані секції "Расход БК РПК/5.45" скопійовано до буферу обміну!');
+        alert('Дані секції "Витрата БК РПК/5.45" скопійовано до буферу обміну!');
     });
 }
 
 function shareRpkData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Расход БК РПК/5.45:\n';
+    let dataString = 'Витрата БК РПК/5.45:\n';
 
     const keys = [
         { id: 'rpk-ps', label: 'ПС' },
@@ -104,7 +104,7 @@ function shareRpkData() {
 
     if (navigator.share) {
         navigator.share({
-            title: 'Дані секції "Расход БК РПК/5.45"',
+            title: 'Дані секції "Витрата БК РПК/5.45"',
             text: dataString,
         }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
     } else {
@@ -114,7 +114,7 @@ function shareRpkData() {
 
 function copyDhkData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Расход БК ДШК/12.7мм:\n';
+    let dataString = 'Витрата на БК ДШК/12.7мм:\n';
 
     const keys = [
         { id: 'mdz', label: 'МДЗ' },
@@ -130,13 +130,13 @@ function copyDhkData() {
     });
 
     navigator.clipboard.writeText(dataString).then(() => {
-        alert('Дані секції "Расход БК ДШК/12.7мм" скопійовано до буферу обміну!');
+        alert('Дані секції "Витрата БК ДШК/12.7мм" скопійовано до буферу обміну!');
     });
 }
 
 function shareDhkData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Расход БК ДШК/12.7мм:\n';
+    let dataString = 'Витрата БК ДШК/12.7мм:\n';
 
     const keys = [
         { id: 'mdz', label: 'МДЗ' },
@@ -153,7 +153,7 @@ function shareDhkData() {
 
     if (navigator.share) {
         navigator.share({
-            title: 'Дані секції "Расход БК ДШК/12.7мм"',
+            title: 'Дані секції "Витрата БК ДШК/12.7мм"',
             text: dataString,
         }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
     } else {
@@ -163,7 +163,7 @@ function shareDhkData() {
 
 function copyAKData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Расход БК АК-74/5.45:\n';
+    let dataString = 'Витрата БК АК-74/5.45:\n';
 
     const keys = [
         { id: 'ps', label: 'ПС' },
@@ -179,13 +179,13 @@ function copyAKData() {
     });
 
     navigator.clipboard.writeText(dataString).then(() => {
-        alert('Дані секції "Расход БК АК-74/5.45" скопійовано до буферу обміну!');
+        alert('Дані секції "Витрата БК АК-74/5.45" скопійовано до буферу обміну!');
     });
 }
 
 function shareAKData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Расход БК АК-74/5.45:\n';
+    let dataString = 'Витрата БК АК-74/5.45:\n';
 
     const keys = [
         { id: 'ps', label: 'ПС' },
@@ -202,7 +202,7 @@ function shareAKData() {
 
     if (navigator.share) {
         navigator.share({
-            title: 'Дані секції "Расход БК АК-74/5.45"',
+            title: 'Дані секції "Витрата БК АК-74/5.45"',
             text: dataString,
         }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
     } else {
@@ -212,7 +212,7 @@ function shareAKData() {
 
 function copyBofData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Розхід БК Бофорс/л70:\n';
+    let dataString = 'Витрата БК Бофорс/л70:\n';
 
     const keys = [
         { id: '40mm', label: '40мм' },
@@ -229,13 +229,13 @@ function copyBofData() {
     });
 
     navigator.clipboard.writeText(dataString).then(() => {
-        alert('Дані секції "Розхід БК Бофорс/л70" скопійовано до буферу обміну!');
+        alert('Дані секції "Витрата БК Бофорс/л70" скопійовано до буферу обміну!');
     });
 }
 
 function shareBofData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Розхід БК Бофорс/л70:\n';
+    let dataString = 'Витрата БК Бофорс/л70:\n';
 
     const keys = [
         { id: '40mm', label: '40мм' },
@@ -253,7 +253,7 @@ function shareBofData() {
 
     if (navigator.share) {
         navigator.share({
-            title: 'Дані секції "Розхід БК Бофорс/л70"',
+            title: 'Дані секції "Витрата БК Бофорс/л70"',
             text: dataString,
         }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
     } else {
@@ -311,7 +311,7 @@ function copyAllData() {
         }
     });
     
-    dataString += '\nРасход БК РПК/5.45:\n';
+    dataString += '\nВитрата БК РПК/5.45:\n';
     RpkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -319,7 +319,7 @@ function copyAllData() {
         }
     });
     
-    dataString += '\nРасход БК ДШК/12.7мм:\n';
+    dataString += '\nВитрата БК ДШК/12.7мм:\n';
     DhkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -327,7 +327,7 @@ function copyAllData() {
         }
     });
 
-    dataString += '\nРасход БК АК-74/5.45:\n';
+    dataString += '\nВитрата БК АК-74/5.45:\n';
     AkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -335,7 +335,7 @@ function copyAllData() {
         }
     });
 
-    dataString += '\nРозхід БК Бофорс/л70:\n';
+    dataString += '\nВитрата БК Бофорс/л70:\n';
     BofSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -398,7 +398,7 @@ function shareAllData() {
         }
     });
     
-    dataString += '\nРасход БК РПК/5.45:\n';
+    dataString += '\nВитрата БК РПК/5.45:\n';
     RpkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -406,7 +406,7 @@ function shareAllData() {
         }
     });
     
-    dataString += '\nРасход БК ДШК/12.7мм:\n';
+    dataString += '\nВитрата БК ДШК/12.7мм:\n';
     DhkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -414,7 +414,7 @@ function shareAllData() {
         }
     });
 
-    dataString += '\nРасход БК АК-74/5.45:\n';
+    dataString += '\nВитрата БК АК-74/5.45:\n';
     AkSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -422,7 +422,7 @@ function shareAllData() {
         }
     });
 
-    dataString += '\nРозхід БК Бофорс/л70:\n';
+    dataString += '\nВитрата БК Бофорс/л70:\n';
     BofSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
