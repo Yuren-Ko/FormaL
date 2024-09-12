@@ -29,10 +29,10 @@
             <input type="text" id="target-name" name="target-name">
 
             <label for="azimuth">Азимут:</label>
-            <input type="number" id="azimuth" name="azimuth">
+            <input type="text" id="azimuth" name="azimuth">
 
             <label for="course">Курс:</label>
-            <input type="number" id="course" name="course">
+            <input type="text" id="course" name="course">
 
             <label for="altitude">Висота:</label>
             <input type="text" id="altitude" name="altitude">
@@ -47,18 +47,45 @@
                 <button type="button" onclick="copyMainData()">Копіювати</button>
                 <button type="button" onclick="shareMainData()">Поділитися</button>
             </div>
+            
+            <h2>Расход БК РПК/5.45:</h2>
+            <label for="rpk-ps">ПС:</label>
+            <input type="text" id="rpk-ps" name="rpk-ps">
+
+            <label for="rpk-ts">ТС:</label>
+            <input type="text" id="rpk-ts" name="rpk-ts">
+            
+            <label for="shooter-rpk">Стрілець:</label>
+            <input type="text" id="shooter-rpk" name="shooter-rpk">
+
+            <div class="button-group">
+                <button type="button" onclick="copyRpkData()">Копіювати</button>
+                <button type="button" onclick="shareRpkData()">Поділитися</button>
+            </div>
+            
+            <h2>Расход БК ДШК/12.7мм:</h2>
+            <label for="mdz">МДЗ:</label>
+            <input type="text" id="mdz" name="mdz">
+
+            <label for="bzt">БЗТ:</label>
+            <input type="text" id="bzt" name="bzt">
+            
+            <label for="shooter-dhk">Стрілець:</label>
+            <input type="text" id="shooter-dhk" name="shooter-dhk">
+
+            <div class="button-group">
+                <button type="button" onclick="copyDhkData()">Копіювати</button>
+                <button type="button" onclick="shareDhkData()">Поділитися</button>
+            </div>
 
             <h2>Расход БК АК-74/5.45:</h2>
-            <label for="pm">ПМ:</label>
-            <input type="number" id="pm" name="pm">
+            <label for="ps">ПС:</label>
+            <input type="text" id="ps" name="ps">
 
             <label for="ts">ТС:</label>
-            <input type="number" id="ts" name="ts">
-
-            <label for="targeting-ak">Цілевказівку дав:</label>
-            <input type="text" id="targeting-ak" name="targeting-ak">
-
-            <label for="shooter-ak">Стрільбу вів:</label>
+            <input type="text" id="ts" name="ts">
+            
+            <label for="shooter-ak">Стрілець:</label>
             <input type="text" id="shooter-ak" name="shooter-ak">
 
             <div class="button-group">
@@ -66,22 +93,22 @@
                 <button type="button" onclick="shareAKData()">Поділитися</button>
             </div>
 
-            <h2>Розхід Б.К. ПЗРК Игла-1:</h2>
-            <label for="bk-usage">НДЖ:</label>
-            <input type="text" id="bk-usage" name="bk-usage">
-
-            <label for="missile">Ракета:</label>
-            <input type="text" id="missile" name="missile">
-
-            <label for="targeting">Цілевказівку дав:</label>
-            <input type="text" id="targeting" name="targeting">
+            <h2>Розхід БК Бофорс/л70:</h2>
+            <label for="40mm">40мм:</label>
+            <input type="text" id="40mm" name="40mm">
 
             <label for="shooter">Стрілець:</label>
             <input type="text" id="shooter" name="shooter">
 
+            <label for="targeting">Цілевказівку дав:</label>
+            <input type="text" id="targeting" name="targeting">
+            
+            <label for="video">Відео:</label>
+            <input type="text" id="video" name="video">
+            
             <div class="button-group">
-                <button type="button" onclick="copyIglaData()">Копіювати</button>
-                <button type="button" onclick="shareIglaData()">Поділитися</button>
+                <button type="button" onclick="copyBofData()">Копіювати</button>
+                <button type="button" onclick="shareBofData()">Поділитися</button>
             </div>
 
             <div class="button-group">
