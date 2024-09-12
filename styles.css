@@ -55,6 +55,7 @@ input, textarea {
 
 textarea {
     resize: vertical;
+}    
 
 .button-group {
     display: flex;
