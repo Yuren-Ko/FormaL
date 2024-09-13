@@ -385,7 +385,7 @@ function shareAllData() {
     ];
 
     const BofSectionKeys = [
-        { id: '40mm', label: 'Витрата БК\n' },
+        { id: '40mm', label: 'Витрата БК' },
         { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
