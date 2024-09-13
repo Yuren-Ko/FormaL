@@ -118,6 +118,27 @@
             </div>
         </form>
     </div>
+
+    <script>
+       const shooterInput = document.getElementById('shooter');
+
+        // Добавляем новую строку при вводе первого символа
+        shooterInput.addEventListener('input', function() {
+            if (this.value.length === 1 && this.value !== '\n') {
+                this.value = '\n' + this.value; // Начало с новой строки
+            }
+        });
+
+        // Увеличиваем высоту поля при добавлении новых строк
+        shooterInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Отключаем стандартное поведение Enter
+                this.value += '\n'; // Добавляем новую строку
+                this.style.height = 'auto'; // Сбрасываем высоту
+                this.style.height = (this.scrollHeight) + 'px'; // Устанавливаем высоту на основе содержимого
+            }
+        });
+    </script>
 </body>
 <script src="scripts.js"></script>
 </html>
