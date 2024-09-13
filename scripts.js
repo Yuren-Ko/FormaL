@@ -212,10 +212,10 @@ function shareAKData() {
 
 function copyBofData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Витрата БК Бофорс/л70:\n';
+    let dataString = 'BOFORS L70 40мм:\n';
 
     const keys = [
-        { id: '40mm', label: '40мм' },
+        { id: '40mm', label: 'Витрата БК' },
         { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
@@ -229,16 +229,16 @@ function copyBofData() {
     });
 
     navigator.clipboard.writeText(dataString).then(() => {
-        alert('Дані секції "Витрата БК Бофорс/л70" скопійовано до буферу обміну!');
+        alert('Дані секції "BOFORS L70 40мм" скопійовано до буферу обміну!');
     });
 }
 
 function shareBofData() {
     const form = document.getElementById('dataForm');
-    let dataString = 'Витрата БК Бофорс/л70:\n';
+    let dataString = 'BOFORS L70 40мм:\n';
 
     const keys = [
-        { id: '40mm', label: '40мм' },
+        { id: '40mm', label: 'Витрата БК' },
         { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
@@ -253,7 +253,7 @@ function shareBofData() {
 
     if (navigator.share) {
         navigator.share({
-            title: 'Дані секції "Витрата БК Бофорс/л70"',
+            title: 'Дані секції "BOFORS L70 40мм"',
             text: dataString,
         }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
     } else {
@@ -298,7 +298,7 @@ function copyAllData() {
     ];
 
     const BofSectionKeys = [
-        { id: '40mm', label: '40мм' },
+        { id: '40mm', label: 'Витрата БК' },
         { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
@@ -335,7 +335,7 @@ function copyAllData() {
         }
     });
 
-    dataString += '\nВитрата БК Бофорс/л70:\n';
+    dataString += '\nBOFORS L70 40мм:\n';
     BofSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
@@ -385,7 +385,7 @@ function shareAllData() {
     ];
 
     const BofSectionKeys = [
-        { id: '40mm', label: '40мм' },
+        { id: '40mm', label: 'Витрата БК\n' },
         { id: 'shooter', label: 'Задіяний о/с та розрахунки' },
         { id: 'targeting', label: 'Цілевказівку дав' },
         { id: 'video', label: 'Відео' }
@@ -422,7 +422,7 @@ function shareAllData() {
         }
     });
 
-    dataString += '\nВитрата БК Бофорс/л70:\n';
+    dataString += '\nBOFORS L70 40мм:\n';
     BofSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
