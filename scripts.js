@@ -161,7 +161,7 @@ function shareDhkData() {
     }
 }
 
-function copyMaximData() {
+function copyMaxData() {
     const form = document.getElementById('dataForm');
     let dataString = 'Расход БК Максим/7.62:\n';
 
@@ -183,7 +183,7 @@ function copyMaximData() {
     });
 }
 
-function shareMaximData() {
+function shareMaxData() {
     const form = document.getElementById('dataForm');
     let dataString = 'Расход БК Максим/7.62:\n';
 
