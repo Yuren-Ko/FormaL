@@ -55,6 +55,18 @@ input[type="number"] {
     color: #ffffff; /* Белый цвет для единицы измерения */
 }
 
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    width: 300%;
+}
+
+textarea {
+    resize: vertical;
+}
+
 /* Группа кнопок для управления */
 .button-group {
     display: flex; /* Используем флекс-контейнер для выравнивания кнопок */
