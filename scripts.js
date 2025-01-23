@@ -161,6 +161,55 @@ function shareDhkData() {
     }
 }
 
+function copyMaksimData() {
+    const form = document.getElementById('dataForm');
+    let dataString = 'Расход БК Максим/7.62:\n';
+
+    const keys = [
+        { id: 'ps', label: 'ПС' },
+        { id: 'ts', label: 'ТС' },
+        { id: 'shooter-ak', label: 'Стрільбу вів' }
+    ];
+
+    keys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    navigator.clipboard.writeText(dataString).then(() => {
+        alert('Дані секції "Расход БК Максим/7.62" скопійовано до буферу обміну!');
+    });
+}
+
+function shareMaksimData() {
+    const form = document.getElementById('dataForm');
+    let dataString = 'Расход БК Максим/7.62:\n';
+
+    const keys = [
+        { id: 'ps', label: 'ПС' },
+        { id: 'ts', label: 'ТС' },
+        { id: 'shooter-ak', label: 'Стрільбу вів' }
+    ];
+
+    keys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    if (navigator.share) {
+        navigator.share({
+            title: 'Дані секції "Расход БК Максим/7.62"',
+            text: dataString,
+        }).catch(error => console.error('Помилка при спробі поділитися даними:', error));
+    } else {
+        alert('Ваш браузер не підтримує функцію поділитися.');
+    }
+    
+}
 function copyAKData() {
     const form = document.getElementById('dataForm');
     let dataString = 'Витрата БК АК-74/5.45:\n';
