@@ -339,6 +339,12 @@ function copyAllData() {
         { id: 'bzt', label: 'БЗТ' },
         { id: 'shooter-dhk', label: 'Стрільбу вів' }
     ];
+
+    const MaxSectionKeys = [
+        { id: 'Max-ps', label: 'ПС' },
+        { id: 'Max-ts', label: 'ТС' },
+        { id: 'shooter-max', label: 'Стрільбу вів' }
+    ];
     
     const AkSectionKeys = [
         { id: 'ps', label: 'ПС' },
@@ -370,6 +376,14 @@ function copyAllData() {
     
     dataString += '\nВитрата БК ДШК/12.7мм:\n';
     DhkSectionKeys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    dataString += '\nВитрата БК Максим/7.62:\n';
+    MaxSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
             dataString += `${label}: ${value}\n`;
@@ -427,6 +441,12 @@ function shareAllData() {
         { id: 'shooter-dhk', label: 'Стрільбу вів' }
     ];
 
+    const MaxSectionKeys = [
+        { id: 'Max-ps', label: 'ПС' },
+        { id: 'Max-ts', label: 'ТС' },
+        { id: 'shooter-max', label: 'Стрільбу вів' }
+    ];
+
     const AkSectionKeys = [
         { id: 'ps', label: 'ПС' },
         { id: 'ts', label: 'ТС' },
@@ -457,6 +477,14 @@ function shareAllData() {
     
     dataString += '\nВитрата БК ДШК/12.7мм:\n';
     DhkSectionKeys.forEach(({ id, label }) => {
+        const value = form[id].value;
+        if (value) {
+            dataString += `${label}: ${value}\n`;
+        }
+    });
+
+    dataString += '\nВитрата БК Максим/7.62:\n';
+    MaxSectionKeys.forEach(({ id, label }) => {
         const value = form[id].value;
         if (value) {
             dataString += `${label}: ${value}\n`;
