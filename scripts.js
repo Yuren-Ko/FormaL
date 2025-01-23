@@ -166,8 +166,8 @@ function copyMaxData() {
     let dataString = 'Расход БК Максим/7.62:\n';
 
     const keys = [
-        { id: 'Max-ps', label: 'ПС' },
-        { id: 'Max-ts', label: 'ТС' },
+        { id: 'max-ps', label: 'ПС' },
+        { id: 'max-ts', label: 'ТС' },
         { id: 'shooter-max', label: 'Стрільбу вів' }
     ];
 
@@ -188,8 +188,8 @@ function shareMaxData() {
     let dataString = 'Расход БК Максим/7.62:\n';
 
     const keys = [
-        { id: 'Max-ps', label: 'ПС' },
-        { id: 'Max-ts', label: 'ТС' },
+        { id: 'max-ps', label: 'ПС' },
+        { id: 'max-ts', label: 'ТС' },
         { id: 'shooter-max', label: 'Стрільбу вів' }
     ];
 
@@ -341,8 +341,8 @@ function copyAllData() {
     ];
 
     const MaxSectionKeys = [
-        { id: 'Max-ps', label: 'ПС' },
-        { id: 'Max-ts', label: 'ТС' },
+        { id: 'max-ps', label: 'ПС' },
+        { id: 'max-ts', label: 'ТС' },
         { id: 'shooter-max', label: 'Стрільбу вів' }
     ];
     
@@ -442,8 +442,8 @@ function shareAllData() {
     ];
 
     const MaxSectionKeys = [
-        { id: 'Max-ps', label: 'ПС' },
-        { id: 'Max-ts', label: 'ТС' },
+        { id: 'max-ps', label: 'ПС' },
+        { id: 'max-ts', label: 'ТС' },
         { id: 'shooter-max', label: 'Стрільбу вів' }
     ];
 
