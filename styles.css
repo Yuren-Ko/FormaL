@@ -34,7 +34,7 @@ input[type="text"],
 input[type="time"], 
 input[type="date"], 
 input[type="number"] {
-    width: calc(300% - 20px); /* Ширина поля ввода с учетом отступов */
+    width: calc(100% - 20px); /* Ширина поля ввода с учетом отступов */
     padding: 8px; /* Внутренние отступы для полей ввода */
     margin-bottom: 10px; /* Отступ снизу полей ввода */
     border: 1px solid #b0b0b0; /* Светло-серая рамка для полей ввода */
@@ -60,7 +60,7 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 4px;
-    width: 300%;
+    width: calc(100% - 20px);
 }
 
 textarea {
