@@ -161,14 +161,14 @@ function shareDhkData() {
     }
 }
 
-function copyMaksimData() {
+function copyMaximData() {
     const form = document.getElementById('dataForm');
     let dataString = 'Расход БК Максим/7.62:\n';
 
     const keys = [
-        { id: 'ps', label: 'ПС' },
-        { id: 'ts', label: 'ТС' },
-        { id: 'shooter-ak', label: 'Стрільбу вів' }
+        { id: 'Max-ps', label: 'ПС' },
+        { id: 'Max-ts', label: 'ТС' },
+        { id: 'shooter-max', label: 'Стрільбу вів' }
     ];
 
     keys.forEach(({ id, label }) => {
@@ -183,14 +183,14 @@ function copyMaksimData() {
     });
 }
 
-function shareMaksimData() {
+function shareMaximData() {
     const form = document.getElementById('dataForm');
     let dataString = 'Расход БК Максим/7.62:\n';
 
     const keys = [
-        { id: 'ps', label: 'ПС' },
-        { id: 'ts', label: 'ТС' },
-        { id: 'shooter-ak', label: 'Стрільбу вів' }
+        { id: 'Max-ps', label: 'ПС' },
+        { id: 'Max-ts', label: 'ТС' },
+        { id: 'shooter-max', label: 'Стрільбу вів' }
     ];
 
     keys.forEach(({ id, label }) => {
